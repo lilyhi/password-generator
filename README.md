@@ -13,3 +13,6 @@ https://lilyhi.github.io/password-generator
 
 ## Contribution
 Made with ❤️ by Lily Hissong
+
+Screenshot displaying full site:
+![Screenshot top half of Horiseon](./assets/images/password-generator.png)
