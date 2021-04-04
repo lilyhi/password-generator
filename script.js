@@ -1,4 +1,6 @@
 // Assignment code here
+
+// assign variables
 var confirmLength;
 var confirmLowerCase = [
   "a",
@@ -84,7 +86,7 @@ var generatePassword = function () {
   confirmLength = parseInt(
     prompt("How many characters would you like your password to be?")
   );
-
+  // conditional statements for each variable
   if (confirmLength <= 7 || confirmLength >= 128) {
     alert("Password must be between 8-128 characters!");
     confirmLength = parseInt(
@@ -92,16 +94,16 @@ var generatePassword = function () {
     );
   }
   var includeLowerCase = window.confirm(
-    "Please click Ok to confirm use of lower case characters"
+    "Please click OK to confirm use of lower case characters"
   );
   var includeUpperCase = window.confirm(
-    "Pleaes click Ok to confirm use of upper case characters"
+    "Pleaes click OK to confirm use of upper case characters"
   );
   var includeNumeric = window.confirm(
-    "Please click Ok to confirm use of numbers"
+    "Please click OK to confirm use of numbers"
   );
   var includeSpecialCharacters = window.confirm(
-    "Please click Ok to confirm use of special characters"
+    "Please click OK to confirm use of special characters"
   );
 
   console.log(
@@ -115,25 +117,25 @@ var generatePassword = function () {
     includeSpecialCharacters
   );
 
-  // denied all confirms
+  // loop and alert when user failed to choose an option
   while (
     includeLowerCase === false &&
     includeUpperCase === false &&
     includeNumeric === false &&
     includeSpecialCharacters === false
   ) {
-    alert("Please choose one of the following options to create password!");
+    alert("Please choose one of the following options to create a password!");
     var includeLowerCase = window.confirm(
-      "Please click Ok to confirm use of lower case characters"
+      "Please click OK to confirm use of lower case characters"
     );
     var includeUpperCase = window.confirm(
-      "Pleaes click Ok to confirm use of upper case characters"
+      "Please click OK to confirm use of upper case characters"
     );
     var includeNumeric = window.confirm(
-      "Please click Ok to confirm use of numbers"
+      "Please click OK to confirm use of numbers"
     );
     var includeSpecialCharacters = window.confirm(
-      "Please click Ok to confirm use of special characters"
+      "Please click OK to confirm use of special characters"
     );
   }
   console.log(
@@ -147,7 +149,7 @@ var generatePassword = function () {
     includeSpecialCharacters
   );
   var randomPassword = [];
-
+  // for loop to create random characters for each variable
   for (var i = 0; i < confirmLength; i++) {
     if (includeLowerCase) {
       var index = Math.floor(Math.random() * confirmLowerCase.length);
